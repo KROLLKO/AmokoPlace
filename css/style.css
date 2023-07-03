@@ -15,7 +15,13 @@
     font-style: italic;
 }
 
+h1 {
+  font-size: 2rem;
+}
 
+p {
+  font-size: 1.2rem;
+}
 
 
 /*fonts letras*/
@@ -257,7 +263,7 @@ ul.show{
   }
   
 
-  .profile
+  .profile,
    {
     flex-basis: 40%;
     padding: 10px;
@@ -302,7 +308,7 @@ ul.show{
   
   .texto p {
     text-align: justify;
-    font-size: 25px;
+    font-size: 1,2rem;
     margin-top: 10px;
   }
   
