@@ -257,12 +257,12 @@ ul.show{
   }
   
 
-  .profile,
+  /*.profile,
    {
     flex-basis: 40%;
     padding: 10px;
     margin: 50px;
-  }
+  }*/
  
   .imagen-responsiva {
     max-width: 100%;
@@ -425,7 +425,7 @@ h2{
   block-size: cover;
   height: 70vh;
   width: 100%;
-
+}
 /*
         .item-uno{
             border:solid;
