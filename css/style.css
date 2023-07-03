@@ -269,7 +269,7 @@ ul.show{
     height: auto;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 770px) {
     .imagen-responsiva {
       transform: scale(1.5);
     }
