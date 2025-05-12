@@ -1,100 +1,539 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/9a823a0886.js" crossorigin="anonymous"></script>
-
-   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-   
-  
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amoko's Place - Habitaciones en Singen</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+ 
 
 
 
-    <script src="js/app.js" defer></script><!--atributo defer para que cargue despues de nuestro contenido html-->
-    <title>AmoKosman</title>
-   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">-->
+
+
 </head>
 <body>
-    <header>
-            <nav class="menu">
-                 <label class="logo" >
-                    <img src="img/AKOSMAN.png">
-                </label>
-                <ul class="menu_items">
-                    <!--class active llevara el efecto de area resaltada -->
-                    <li class="active"><a href="#">Start </a></li>
-                    <li><a href="#">Schlafzimmer</a></li>
-                    <li><a href="#">Dienste</a></li>
-                    <li><a href="#">erkunden</a></li>
-                    <li><a href="#">entdecken</a></li>
-                    <li><a href="#">Kontakt</a></li>
-                </ul>
-                <span class="btn_menu">
-                    <i class="fa fa-bars fa-lg"></i>
-                </span>
-            </nav>
-            <!--class btn_menu es para mostrar el icono de menu en moviles -->
-            
-      <!--- </div>-->
-    </header>
-    <section class="container">
-        <div class="centered">
-            <p class="texto">"Zuhause und Komfort in Singen:<br> Zimmer für Arbeiter-WG."
-             </p>
-        </div>
-        
-    </section>
-    <section class="anfitrion">
-    <div class="title"></div>
 
-    <div class="anfitrion1">  
-            <div class="center">
-
-                <div  class="profile">
-                     <img src="img/perfilamo.png" class="imagen-responsiva">
-                </div>
-                <div class="texto">
-                     <!-- <h2>Super Gastgeber:</h2> -->
-                     <h3>Super Gastgeber:</h3>
-
-                    <p class="texto-1"><em>Hallo! Mein Name ist Amo und ich werde dein Gastgeber in den Akosman Rooms sein.
-                    Ich lebe seit einiger in Deutschland, komme aber ursprünglich aus der Türkei.
-                    Ich spreche Englisch, Deutsch, Türkisch und ein bisschen Spanisch.
-                    Wenn du auf der Suche nach einem komfortablen Zimmer in der Nähe
-                    der Hauptattraktionen und renommierten Unternehmen in Singen bist,
-                        unvergesslich wird. Herzlich willkommen bei Akosman Rooms, dein Zuhause 
-                        fernab von Zuhause! </em></p>
-                </div>
-            </div>
-        </div>
+<!--Menu corregido-->
+<header class="main-header">
+  <div class="top-bar">
+    <img src="img/Logo.png" alt="Logo AK" class="logo" />
     
-    </section>
+    <nav class="nav-menu">
+      <a href="#">Inicio</a>
+      <a href="#habitaciones">Habitaciones</a>
+      <a href="#empresas">Empresas</a>
+      <a href="#singen">Qué hacer</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
 
-    <section class="uno">
-        <h2>WG-Zimmer für Arbeiter</h2>
-        <div class="center">
-            <div class="item-uno">
-                <img src="img/room-one.jpeg">
-                <div class="overlay"></div>
-            </div>
-            <div class="item-dos">
-                <img src="img/room-two.jpeg">
-            </div>
-            <div class="item-tres">
-                <img src="img/room-thre.jpeg">
-            </div>
-        </div>
-    </section>
-    <section class="Blue">
-        <p>una section extra de conetenido </p>
-    </section>
+    <div class="contacto-top">
+      <a href="tel:+573156517706">+573156517706</a>
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-header">
     
+      <button class="close-btn" id="close-menu" aria-label="Cerrar menú">×</button>
+    </div>
+
+    <ul class="mobile-nav">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#habitaciones">Habitaciones</a></li>
+      <li><a href="#empresas">Empresas</a></li>
+      <li><a href="#singen">Qué hacer</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</header>
+
+
+<!-- Seccion del HERO-->
+
+<div class="hero">
+  <div class="slider">
+    <img src="img/singen1.jpg" alt="Imagen 1" class="active">
+    <img src="img/singen2.jpg" alt="Imagen 2">
+    <img src="img/singen3.jpg" alt="Imagen 3">
+    <img src="img/singen4.jpg" alt="Imagen 4">
+  </div>
+  <div class="hero-content">
+    <h1>Encuentra tu espacio ideal en Singen</h1>
+    <p>Habitaciones amobladas cerca de tu trabajo y el corazón de la ciudad.</p>
+    <a href="#habitaciones" class="btn-principal">Ver Habitaciones</a>
+  </div>
+</div>
+<!--Seccion de consulta de ocupacion-->
+
+<section class="reserva-consulta">
+  <form class="form-reserva" id="form-reserva">
+    <select name="habitacion" required>
+      <option value="">Habitación...</option>
+      <option value="habitacion1">Habitación 1</option>
+      <option value="habitacion2">Habitación 2</option>
+      <option value="habitacion3">Habitación 3</option>
+    </select>
+
+    <input type="date" name="fecha_inicio" required placeholder="Fecha de entrada">
+    <input type="date" name="fecha_salida" required placeholder="Fecha de salida">
+
+    <button type="submit">Consultar disponibilidad</button>
+  </form>
+</section>
+
+
+<!/////////////////////////////////////////////-->
+
+
+
+  
+
+
+
+<!---SECCION DE HABITACIONES -->
+
+
+<section class="habitaciones-section">
+  <h2 class="habitaciones-title">Conoce Nuestras Habitaciones</h2>
+  <p class="habitaciones-subtitle">Habitaciones acogedoras listas para ti en Singen</p>
+
+  <div class="habitaciones-galeria">
+    <div class="habitacion-card">
+      <div class="imagen-container">
+        <img src="img/room-one.jpeg" alt="Habitación 1">
+        <span class="precio">$450/Mes</span>
+      </div>
+      <h3>Habitación 1</h3>
+      <p>Cerca de Takeda · Baño privado · WiFi</p>
+    </div>
+
+    <div class="habitacion-card">
+      <div class="imagen-container">
+        <img src="img/room-two.jpeg" alt="Habitación 2">
+        <span class="precio">$390/Mes</span>
+      </div>
+      <h3>Habitación 2</h3>
+      <p>Vista al parque · Baño compartido · Cocina común</p>
+    </div>
+
+    <div class="habitacion-card">
+      <div class="imagen-container">
+        <img src="img/room-thre.jpeg" alt="Habitación 3">
+        <span class="precio">$510/Mes</span>
+      </div>
+      <h3>Habitación 3</h3>
+      <p>Con balcón · Amoblada · Lavadora incluida</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!--CIERRE DE SECCION DE HABITACIONES -->
+
+
+
+
+
+<!-- SECCIÓN: Empresas importantes en Singen -->
+<section class="empresas-singen">
+  <h2 class="empresas-titulo">Empresas destacadas en Singen (Hohentwiel)</h2>
+  <p class="empresas-subtitulo">Algunas de las compañías líderes que impulsan el crecimiento en la ciudad</p>
+  <div class="empresas-slider" id="empresas-slider">
+    <div class="empresa-item">
+      <img src="img/bosch.png" alt="Bosch">
+    </div>
+    <div class="empresa-item">
+      <img src="img/eckart.png" alt="Eckart">
+    </div>
+    <div class="empresa-item">
+      <img src="img/GeorgFischer.png" alt="Georg Fischer">
+    </div>
+    <div class="empresa-item">
+      <img src="img/ferrari.png" alt="Ferrari">
+    </div>
+    <div class="empresa-item">
+      <img src="img/takeda.png" alt="Takeda">
+    </div>
+    <div class="empresa-item">
+      <img src="img/maggi.png" alt="Maggi">
+    </div>
+    <div class="empresa-item">
+      <img src="img/Muller.png" alt="Müller">
+    </div>
+    <!-- Repetimos para loop infinito visual -->
+    <div class="empresa-item">
+      <img src="img/bosch.png" alt="Bosch">
+    </div>
+    <div class="empresa-item">
+      <img src="img/eckart.png" alt="Eckart">
+    </div>
+    <div class="empresa-item">
+      <img src="img/GeorgFischer.png" alt="Georg Fischer">
+    </div>
+    <div class="empresa-item">
+      <img src="img/ferrari.png" alt="Ferrari">
+    </div>
+    <div class="empresa-item">
+      <img src="img/takeda.png" alt="Takeda">
+    </div>
+    <div class="empresa-item">
+      <img src="img/maggi.png" alt="Maggi">
+    </div>
+    <div class="empresa-item">
+      <img src="img/Muller.png" alt="Müller">
+    </div>
+  </div>
+
+
+</section>
+
+
+
+
+
+
+<!--cierre seccion de logos empresariales -->
+
+
+<!-- NUEVA SECCIÓN: Galería de áreas del apartamento -->
+<section class="galeria-areas">
+  <h2 class="galeria-titulo">Áreas del Apartamento</h2>
+  <p class="galeria-subtitulo">Descubre cada rincón acogedor y funcional de tu próximo hogar</p>
+  <div class="galeria-grid">
+    <div class="galeria-item"><img src="img/sala.jpg" alt="Sala"></div>
+    <div class="galeria-item"><img src="img/habitacion.jpg" alt="Habitación"></div>
+    <div class="galeria-item"><img src="img/cocina.jpg" alt="Cocina"></div>
+    <div class="galeria-item"><img src="img/comedor.jpg" alt="Comedor"></div>
+    <div class="galeria-item"><img src="img/bano.jpeg" alt="Baño"></div>
+    <div class="galeria-item"><img src="img/lavanderia.jpeg" alt="Lavandería"></div>
+  </div>
+
+
+<!-- OCULTAS, solo para lightbox -->
+  <div class="galeria-item oculta"><img src="img/area1.jpg" alt="Terraza"></div>
+  <div class="galeria-item oculta"><img src="img/area2.jpg" alt="Entrada"></div>
+  <div class="galeria-item oculta"><img src="img/area3.jpg" alt="Patio"></div>
+  <div class="galeria-item oculta"><img src="img/area4.jpg" alt="Patio"></div>
+  <div class="galeria-item oculta"><img src="img/area5.jpg" alt="Patio"></div>
+  <div class="galeria-item oculta"><img src="img/area6.jpg" alt="Patio"></div>
+  <div class="galeria-item oculta"><img src="img/area7.jpg" alt="Patio"></div>
+  <div class="galeria-item oculta"><img src="img/area8.jpg" alt="Patio"></div>
+  <div class="galeria-item oculta"><img src="img/area9.jpg" alt="Patio"></div>
+  <!-- Y así hasta completar las 15 -->
+
+
+
+</section>
+
+<div id="lightbox">
+  <button id="prev">&#10094;</button>
+  <img src="" alt="Imagen ampliada">
+  <button id="next">&#10095;</button>
+</div>
+
+
+<!---SECCION DE ANFITRION -->
+
+<section class="host-title-section">
+  <div class="host-title">
+    <h2>Anfitrión</h2>
+    <p>Conoce a la persona detrás de Amoko's Place. Ahmet es más que un anfitrión: es un guía, un amigo y el alma del lugar.</p>
+  </div>
+</section>
+
+<section class="host-container">
+  <div class="host-wrapper">
+    <div class="host-image">
+      <img src="img/host1.png" alt="Ahmet - Anfitrión">
+    </div>
+    <div class="host-text-box">
+      <p>Hola, soy Ahmet. Nací en Turquía ,desde hace años vivo en  Alemania. Mis raíces turcas se reflejan en la forma en que recibo a las personas: con calidez, generosidad y una gran pasión por la buena comida.</p>
+      <p>En Amoko’s Place he creado un espacio tranquilo, acogedor y lleno de detalles pensados para que te sientas como en casa. Ya sea que vengas por trabajo o por aventura, aquí encontrarás comodidad, hospitalidad y apoyo en lo que necesites: desde recomendaciones locales hasta ayuda con traducciones o rutas.</p>
+      <p>Hablo turco, alemán e inglés. Será un gusto compartir contigo lo mejor de la vida local.</p>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Botón flotante de WhatsApp -->
+
+<!-- BOTÓN FLOTANTE WHATSAPP -->
+<div class="whatsapp-container" id="whatsapp-container">
+  <div class="whatsapp-popup" id="whatsapp-popup">
+    <p>Hola 👋 ¿Cómo podemos ayudarte?</p>
+    <a href="https://wa.me/573156517706" target="_blank" class="btn-whatsapp-popup">Escribir por WhatsApp</a>
+  </div>
+  <div class="whatsapp-toggle" id="whatsapp-toggle">
+    <img src="img/whatsapp-icon.png" alt="WhatsApp" class="icon-whatsapp">
+  </div>
+</div>
+
+
+<!-- Cierre de flotante de WhatsApp -->
+
+<!---seccion de idioma traductor -->
+
+<!--<div id="google_translate_element"></div>-->
+
+
+
+
+
+
+
+
+
+
+<!-- Inicio del Footer  -->
+
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-column">
+      <h4 data-i18n="footer_about">Sobre Nosotros</h4>
+      <p>Habitaciones cómodas para trabajadores y viajeros temporales, con descanso, seguridad y buena ubicación..</p>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h4 data-i18n="footer_explore">Explora</h4>
+      <ul>
+        <li><a href="#habitaciones" data-i18n="footer_rooms">Habitaciones</a></li>
+        <li><a href="#empresas" data-i18n="footer_companies">Empresas</a></li>
+        <li><a href="#singen" data-i18n="footer_activities">Qué hacer</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4 data-i18n="footer_info">Información</h4>
+      <ul>
+        <li><a href="#contacto" data-i18n="footer_contact">Contacto</a></li>
+        <li><a href="#" data-i18n="footer_policy">Política y Privacidad</a></li>
+      </ul>
+    </div>
+
+    
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Amoko’s Place. Todos los derechos reservados.</p>
+  </div>
+   <div class="footer-branding">
+  
+    <img src="img/Mor.png" alt="Logo diseñador" class="logo-branding">
+  </div>
+
+
+
+</footer>
+
+
+
+
+<script>
+
+
+//aqui elimine ///
+
+
+
+// SECCIÓN: Empresas importantes en Singen //
+// Carrusel automático de empresas
+let scrollInterval = setInterval(() => {
+  const slider2 = document.getElementById('empresas-slider');
+  if (slider2) {
+    slider2.scrollBy({ left: 150, behavior: 'smooth' });
+  }
+}, 4000);
+
+
+//seccion de galeria del apartamento con lightbox//
+
+
+
+
+
+
+
+//LIGHT BOX CON FLECHAS TAMAÑO FIJO //
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  // SLIDER HERO
+  const images = document.querySelectorAll('.slider img');
+  let index = 0;
+  setInterval(() => {
+    images[index].classList.remove('active');
+    index = (index + 1) % images.length;
+    images[index].classList.add('active');
+  }, 5000);
+
+
+  // MENÚ HAMBURGUESA
+  const toggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const closeBtn = document.getElementById('close-menu');
+
+  toggle?.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+
+  closeBtn?.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+  });
+
+
+  // SCROLL EMPRESAS
+  const empresasSlider = document.getElementById('empresas-slider');
+  if (empresasSlider) {
+    setInterval(() => {
+      empresasSlider.scrollBy({ left: 150, behavior: 'smooth' });
+    }, 4000);
+  }
+
+
+  // GALERÍA LIGHTBOX CON NAVEGACIÓN
+
+  const galeriaImgs = Array.from(document.querySelectorAll('.galeria-item img')); // mantiene TODAS
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+  const prevBtn = document.getElementById('prev');
+  const nextBtn = document.getElementById('next');
+  let currentIndex = 0;
+
+  galeriaImgs.forEach((img, i) => {
+    img.addEventListener('click', () => {
+      currentIndex = i;
+      showImage();
+      lightbox.classList.add('active');
+    });
+  });
+
+  function showImage() {
+    lightboxImg.src = galeriaImgs[currentIndex].src;
+  }
+
+  prevBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    currentIndex = (currentIndex - 1 + galeriaImgs.length) % galeriaImgs.length;
+    showImage();
+  });
+
+  nextBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    currentIndex = (currentIndex + 1) % galeriaImgs.length;
+    showImage();
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove('active');
+    }
+  });
+
+});
+
+
+//SCRIP WHATSAPP//
+
+const toggleWhats = document.getElementById('whatsapp-toggle');
+const popupWhats = document.getElementById('whatsapp-popup');
+
+toggleWhats.addEventListener('click', function () {
+  popupWhats.classList.toggle('active');
+});
+
+document.addEventListener('click', function (e) {
+  if (!document.getElementById('whatsapp-container').contains(e.target)) {
+    popupWhats.classList.remove('active');
+  }
+});
+
+
+// Selector de idioma
+const langBtn = document.getElementById('lang-btn');
+const langMenu = document.getElementById('lang-menu');
+
+langBtn.addEventListener('click', () => {
+  langMenu.classList.toggle('show');
+});
+
+document.addEventListener('click', (e) => {
+  if (!document.getElementById('lang-switcher').contains(e.target)) {
+    langMenu.classList.remove('show');
+  }
+});
+
+
+
+//para el año //
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+
+//script traductor //
+
+
+
+
+</script>
+
+
+
+
+<!--selectror de idioma-->
+
+<div class="lang-switcher" id="lang-switcher">
+  <button id="lang-btn"><i class="fas fa-globe"></i></button>
+  <ul class="lang-menu" id="lang-menu">
+    <li><a href="?lang=es">Español</a></li>
+    <li><a href="?lang=en">English</a></li>
+    <li><a href="?lang=de">Deutsch</a></li>
+  </ul>
+</div>
+
+
+
+<!--cierre de selector de idioma-->
+
+
+
+
+
+
+
 
 </body>
 </html>

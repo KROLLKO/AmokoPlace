@@ -1,0 +1,1209 @@
+
+/
+/* ============================= */
+/* CONFIGURACIÓN GENERAL */
+/* ============================= */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  color: #111;
+  padding-top: 100px; /* Altura de la barra fija */
+  margin: 0;
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* ✅ evita desbordamientos laterales */
+}
+
+
+/* ============================= */
+/* HERO SLIDER COMPLETO */
+/* ============================= */
+
+/* ===== HERO SLIDER ===== */
+.hero {
+  position: relative;
+  width: 100%;     /* <--- en lugar de 100vw */
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+
+.slider img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  max-width: 90%;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-principal {
+  background-color: #001aff;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-principal:hover {
+  background-color: #0000cc;
+}
+
+/*===================================*/
+/*SECCION DE CONSULTA DE CALENDARIO HABITACIONES*/
+/*=====================================*/
+
+
+
+.reserva-consulta {
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  padding: 1.5rem 2rem;
+  max-width: 980px;
+  margin: -50px auto 2rem; /* el truco: negativo para que suba */
+  border-radius: 16px;
+  position: relative;
+  z-index: 5;
+}
+
+.form-reserva {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-reserva select,
+.form-reserva input {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  flex: 1 1 180px;
+}
+
+.form-reserva button {
+  background: #00d2ff;
+  border: none;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-reserva button:hover {
+  background: #008ecc;
+}
+
+/*=======CIERRE DE SECCION DE CONSULTA ====*/
+
+
+
+/*=========SECCION DE HABITACIONES ===*/
+
+.habitaciones-section {
+  padding: 3rem 1rem;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.habitaciones-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+.habitaciones-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.habitaciones-galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.habitacion-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12); /* sombra más marcada */
+  width: 360px;         /* antes 300px */
+  height: 460px;        /* agregar altura total si deseas un tamaño fijo */
+  transition: transform 0.4s ease;
+}
+
+.habitacion-card:hover .imagen-container img {
+  transform: scale(1.05);
+}
+
+.imagen-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.imagen-container img {
+  width: 100%;
+  height: 240px;        /* antes 200px MODIFICA EL ANCHO  */
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.precio {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.habitacion-card h3 {
+  margin: 1.2rem 0 0.5rem;
+  font-size: 1.3rem;     /* tamaño más llamativo */
+}
+
+.habitacion-card p {
+  font-size: 1.05rem;    /* un poco más grande */
+  color: #555;
+  padding: 0 1rem 1.2rem;
+}
+
+.precio {
+  font-size: 0.95rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+
+
+
+/* ===========CIERRE DE HABITACIONES SECCION ================== */
+
+
+
+/* ============================= */
+/* MENÚ corregido  */
+/* ============================= */
+
+
+
+  .main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+}
+
+  .top-bar {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    z-index: 1000;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo {
+  height: 80px;
+  transition: height 0.3s ease;
+}
+
+@media (max-width: 992px) {
+  .logo {
+    height: 48px; /* más pequeño en móvil */
+  }
+}
+    .nav-menu a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-menu a:hover {
+      color: #001aff;
+    }
+
+    .contacto-top a {
+      color: #001aff;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .menu-toggle {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      z-index: 1101;
+      position: relative;
+      margin-left: 1rem;
+      background-color: rgba(255,255,255,0.1);
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: white;
+      margin: 4px 0;
+      border-radius: 2px;
+    }
+
+    .mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.96);
+      width: 100%;
+      align-items: center;
+      padding: 0;
+    }
+
+    .mobile-menu.open {
+      max-height: 500px;
+      padding-top: 1rem;
+    }
+
+    .mobile-header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.2rem;
+      box-sizing: border-box;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+   
+
+    .close-btn {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .mobile-nav {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      text-align: center;
+    }
+
+    .mobile-nav li {
+      width: 100%;
+    }
+
+    .mobile-nav li a {
+      display: block;
+      width: 100%;
+      padding: 1rem 1.5rem;
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: white;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .mobile-nav li a:hover {
+      background-color: #e0e0e0;
+      color: #000;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    @media (max-width: 992px) {
+      .nav-menu,
+      .contacto-top {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .top-bar {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (min-width: 993px) {
+      .mobile-menu,
+      .menu-toggle {
+        display: none;
+      }
+
+      .nav-menu,
+      .contacto-top {
+        display: flex;
+      }
+    }
+ 
+
+/* ============================= */
+/* MENÚ corregido  */
+/* ============================= */
+
+
+
+  .main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+}
+
+  .top-bar {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    z-index: 1000;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo {
+  height: 80px;
+  transition: height 0.3s ease;
+}
+
+@media (max-width: 992px) {
+  .logo {
+    height: 48px; /* más pequeño en móvil */
+  }
+}
+    .nav-menu a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-menu a:hover {
+      color: #001aff;
+    }
+
+    .contacto-top a {
+      color: #001aff;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .menu-toggle {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      z-index: 1101;
+      position: relative;
+      margin-left: 1rem;
+      background-color: rgba(255,255,255,0.1);
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: white;
+      margin: 4px 0;
+      border-radius: 2px;
+    }
+
+    .mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.96);
+      width: 100%;
+      align-items: center;
+      padding: 0;
+    }
+
+    .mobile-menu.open {
+      max-height: 500px;
+      padding-top: 1rem;
+    }
+
+    .mobile-header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.2rem;
+      box-sizing: border-box;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+   
+
+    .close-btn {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .mobile-nav {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      text-align: center;
+    }
+
+    .mobile-nav li {
+      width: 100%;
+    }
+
+    .mobile-nav li a {
+      display: block;
+      width: 100%;
+      padding: 1rem 1.5rem;
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: white;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .mobile-nav li a:hover {
+      background-color: #e0e0e0;
+      color: #000;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    @media (max-width: 992px) {
+      .nav-menu,
+      .contacto-top {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .top-bar {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (min-width: 993px) {
+      .mobile-menu,
+      .menu-toggle {
+        display: none;
+      }
+
+      .nav-menu,
+      .contacto-top {
+        display: flex;
+      }
+    }
+ 
+
+/* ===========cierre seccion Honor  ================== */
+
+
+/*empresas en singen */
+.empresas-singen {
+  padding: 3rem 1rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.empresas-titulo {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+.empresas-subtitulo {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.empresas-slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.empresas-slider {
+  display: flex;
+  width: max-content;
+  animation: scrollLogos 50s linear infinite;
+}
+
+.empresa-item {
+  flex: 0 0 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  padding: 0 1.5rem;
+}
+
+.empresa-item img {
+  max-height: 35px;
+  max-width: 100%;
+  object-fit: contain;
+  filter: grayscale(0.4);
+  transition: filter 0.3s ease;
+}
+
+.empresa-item img:hover {
+  filter: grayscale(0);
+}
+
+@keyframes scrollLogos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ===========Empresas importantes en Singen ================== */
+
+
+/*GALERIA DE AREAS DEL PARTAMENTO */
+
+
+.galeria-titulo {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+.galeria-subtitulo {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.galeria-grid {
+  display: grid;
+  /*grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));*/
+  gap: 1.5rem;
+  padding: 0 1rem;
+  justify-items: center;
+}
+
+.galeria-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/*nuevo anexo */
+.galeria-areas {
+  background-color: #f4f4f4;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;      /* ✅ limita el ancho */
+  margin: 0 auto;         /* ✅ centra horizontalmente */
+  padding: 0 1rem;
+}
+
+@media (max-width: 992px) {
+  .galeria-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .galeria-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*Oculta las imagnesque so se muestran en la cuadricula*/
+
+.galeria-item.oculta {
+  display: none;
+}
+
+
+
+
+/*--------------*/
+
+
+
+
+.galeria-item {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  max-width: 320px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.galeria-item:hover {
+  transform: scale(1.03);
+}
+
+.galeria-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* LIGHTBOX */
+#lightbox {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#lightbox img {
+  width: auto;
+  height: 80vh;
+  max-width: 90%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+#lightbox.active {
+  display: flex;
+}
+
+
+/*botnes del light box*/
+
+#lightbox button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+#prev { left: 20px; }
+#next { right: 20px; }
+
+
+/*---------CONTROLA EL TAMAÑO DEL lIGHTBOX----------*/
+
+#lightbox img {
+  max-width: 90vw;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================= */
+/* SECCIÓN DE ANFITRIÓN */
+/* ============================= */
+.host-title-section {
+  background-color: #0e0e0e;
+  padding: 2rem 1rem 1rem;
+  text-align: center;
+}
+
+.host-title {
+  max-width: 800px;
+  margin: auto;
+}
+
+.host-title h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color:#ffffff;
+}
+
+.host-title p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.host-container {
+  position: relative;
+  padding: 2rem 2rem 4rem;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.host-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('../img/TorredelReloj.jpeg') center center / cover no-repeat;
+  z-index: 0;
+}
+
+.host-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.host-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1400px;
+  margin: auto;
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.host-image {
+  flex: 1.9;
+  display: flex;
+  justify-content: center;
+}
+
+.host-image img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  object-fit: cover;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.host-text-box {
+  flex: 1.2;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  color: #e0e0e0;
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: justify;
+  max-width: 500px;
+  margin-left: -100px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+@media (max-width: 992px) {
+  .nav-menu,
+  .contacto-top {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex !important;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .mobile-menu.open {
+    display: flex;
+  }
+
+  .host-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .host-image img {
+    max-width: 320px;
+  }
+
+  .host-text-box {
+    margin-left: 0;
+    max-width: 90%;
+    text-align: justify;
+    font-size: 1rem;
+  }
+
+  .host-title h2 {
+    font-size: 2rem;
+  }
+
+  .host-title p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .category-card,
+  .property-card {
+    min-width: 80%;
+  }
+
+  .property-slider-wrapper {
+    overflow-x: scroll;
+  }
+
+  .property-slider {
+    flex-wrap: nowrap;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+
+
+
+
+
+/*---------nueva seccion whatsapp*/
+
+
+/* ============================= */
+/* BOTÓN WHATSAPP FLOTANTE */
+/* ============================= */
+
+/* CONTENEDOR FLOTANTE */
+.whatsapp-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+/* BOTÓN DE WHATSAPP */
+.whatsapp-toggle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  background-color: #25D366;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ÍCONO DE WHATSAPP */
+.icon-whatsapp {
+  width: 35px;
+  height: 35px;
+}
+
+/* POPUP WHATSAPP CON ANIMACIÓN */
+.whatsapp-popup {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  width: 250px;
+  z-index: 9999;
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+/* ACTIVACIÓN VISIBLE */
+.whatsapp-popup.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* BOTÓN INTERIOR */
+.btn-whatsapp-popup {
+  margin-top: 10px;
+  background-color: #25D366;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+/*------ESTILOS DEL FOOTER---*/
+
+
+.footer {
+  background-color: #0e0e0e;
+  color: #ddd;
+  font-size: 0.95rem;
+  margin-top: 3rem;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  background-color: #1a1a1a;
+}
+
+.footer-column {
+  flex: 1 1 220px;
+  margin: 1rem;
+}
+
+.footer-column h4 {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-column ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #00d2ff;
+}
+
+.footer-social a i {
+  color: #ddd;
+  font-size: 1.2rem;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover i {
+  color: #00d2ff;
+}
+
+.lang-menu a {
+  color: #ccc;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.lang-menu a:hover {
+  color: #00d2ff;
+}
+
+.footer-bottom {
+  background-color: #0f0f0f;;
+  text-align: center;
+  padding: 0 rem;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  color: #aaa;
+}
+
+
+
+/*estilosd dels lector de idioma*/
+
+
+
+.lang-switcher {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  z-index: 9999;
+}
+
+#lang-btn {
+  background: #222;
+  color: white;
+  border: none;
+  font-size: 1.4rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.lang-menu {
+  display: none;
+  margin-top: 10px;
+  list-style: none;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.lang-menu li a {
+  display: block;
+  padding: 0.6rem 1rem;
+  color: #111;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.lang-menu li a:hover {
+  background-color: #f0f0f0;
+}
+
+.lang-menu.show {
+  display: block;
+}
+
+
+
+/*MARCA KROLLK*/
+.footer-branding {
+  text-align: center;
+  margin-top: 0 rem;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.footer-branding img.logo-branding {
+  height: 80px;
+  margin-top: 0 rem;
+ /* filter: brightness(0) invert(1); /* si el fondo es oscuro */
+}
+
+
+
+/*margen rojo
+.hero,
+.featured-section,
+.host-title-section,
+.host-container {
+  border: 2px solid red;
+}*/
